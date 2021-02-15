@@ -35,7 +35,8 @@ class DrawingViewController: UIViewController {
         canvasView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
         canvasView.backgroundColor = UIColor.lightGray
-        canvasView.tool = PKInkingTool(.pen, color: .systemOrange, width: 10)
+        
+        setupSimpleTools()
     }
     
     @IBAction func togglePencil(_ sender: UIBarButtonItem) {
@@ -43,4 +44,28 @@ class DrawingViewController: UIViewController {
         allowFingerButton.title = canvasView.allowsFingerDrawing ? "Finger" : "Pencil"
     }
     
+    func setupSimpleTools() {
+        let segmentedControl = UISegmentedControl(items: ["Black", "Red"])
+        segmentedControl.selectedSegmentIndex = 0
+        let barButtonItem = UIBarButtonItem(customView: segmentedControl)
+        segmentedControl.addTarget(self, action: #selector(penChanged(_:)), for: .valueChanged)
+        navigationItem.rightBarButtonItems?.append(barButtonItem)
+        
+        updatePen()
+    }
+    
+    @objc
+    func penChanged(_ sender: UISegmentedControl) {
+        selectedPenIndex = sender.selectedSegmentIndex
+        
+        updatePen()
+    }
+    
+    func updatePen() {
+        if selectedPenIndex == 0 {
+            canvasView.tool = PKInkingTool(.pen, color: .systemFill, width: 10)
+        } else {
+            canvasView.tool = PKInkingTool(.pen, color: .systemRed, width: 10)
+        }
+    }
 }
