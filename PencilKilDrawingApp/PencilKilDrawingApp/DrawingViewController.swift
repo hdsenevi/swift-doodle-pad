@@ -36,7 +36,8 @@ class DrawingViewController: UIViewController {
         
         canvasView.backgroundColor = UIColor.lightGray
         
-        setupSimpleTools()
+//        setupSimpleTools()
+        setupToolPicker()
     }
     
     @IBAction func togglePencil(_ sender: UIBarButtonItem) {
@@ -67,5 +68,32 @@ class DrawingViewController: UIViewController {
         } else {
             canvasView.tool = PKInkingTool(.pen, color: .systemRed, width: 10)
         }
+    }
+    
+    func setupToolPicker() {
+        if let window = self.parent?.view.window,
+           let toolPicker = PKToolPicker.shared(for: window) {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+            toolPicker.addObserver(canvasView)
+            canvasView.becomeFirstResponder()
+            
+            toolPicker.addObserver(self)
+        }
+    }
+}
+
+extension DrawingViewController: PKToolPickerObserver {
+    func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) {
+        if let tool = toolPicker.selectedTool as? PKEraserTool {
+            print("Eraser: \(tool.eraserType)")
+        } else if let tool = toolPicker.selectedTool as? PKInkingTool {
+            print("Int: \(tool.inkType) Color: \(tool.color) Width: \(tool.width)")
+        } else if let _ = toolPicker.selectedTool as? PKLassoTool {
+            print("Lasso tool")
+        }
+    }
+    
+    func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) {
+        print("Ruler active: \(toolPicker.isRulerActive)")
     }
 }
