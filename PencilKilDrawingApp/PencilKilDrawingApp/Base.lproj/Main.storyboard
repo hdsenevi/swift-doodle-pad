@@ -105,8 +105,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="cWh-0g-4aL">
                         <leftBarButtonItems>
-                            <barButtonItem title="Undo" id="6D5-BA-Ahw"/>
-                            <barButtonItem title="Redo" id="m7e-Iv-q74"/>
+                            <barButtonItem title="Undo" id="6D5-BA-Ahw">
+                                <connections>
+                                    <action selector="undo:" destination="eay-NW-7jh" id="SNE-Pj-8c5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Redo" id="m7e-Iv-q74">
+                                <connections>
+                                    <action selector="redo:" destination="eay-NW-7jh" id="PWV-ld-MtH"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Pencil" id="F1t-PX-fye">
                             <connections>

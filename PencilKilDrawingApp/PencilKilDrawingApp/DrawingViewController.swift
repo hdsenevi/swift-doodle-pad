@@ -78,7 +78,16 @@ class DrawingViewController: UIViewController {
             canvasView.becomeFirstResponder()
             
             toolPicker.addObserver(self)
+            updateTools(toolPicker)
         }
+    }
+    
+    @IBAction func undo(_ sender: UIBarButtonItem) {
+        undoManager?.undo()
+    }
+    
+    @IBAction func redo(_ sender: UIBarButtonItem) {
+        undoManager?.redo()
     }
 }
 
@@ -95,5 +104,22 @@ extension DrawingViewController: PKToolPickerObserver {
     
     func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) {
         print("Ruler active: \(toolPicker.isRulerActive)")
+    }
+    
+    func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) {
+       updateTools(toolPicker)
+    }
+    
+    func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) {
+        updateTools(toolPicker)
+    }
+    
+    func updateTools(_ toolPicker: PKToolPicker) {
+        let obscuredFrame = toolPicker.frameObscured(in: view)
+        if obscuredFrame.isNull {
+            navigationItem.leftBarButtonItems = []
+        } else {
+            navigationItem.leftBarButtonItems = [undoButton, redoButton]
+        }
     }
 }
