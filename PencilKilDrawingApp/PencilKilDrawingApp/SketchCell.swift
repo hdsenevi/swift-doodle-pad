@@ -9,13 +9,13 @@ import UIKit
 
 class SketchCell: UICollectionViewCell {
     
-  @IBOutlet weak var thumbnailImageView: UIImageView!
-  
-  var image: UIImage? {
-    didSet {
-      if let image = image {
-        thumbnailImageView.image = image
-      }
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    
+    var image: UIImage? {
+        didSet {
+            if let image = image {
+                thumbnailImageView.image = image
+            }
+        }
     }
-  }
 }

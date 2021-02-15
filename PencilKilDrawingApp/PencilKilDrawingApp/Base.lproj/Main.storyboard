@@ -12,7 +12,7 @@
         <!--Thumbnail Collection View Controller-->
         <scene sceneID="in3-EF-mul">
             <objects>
-                <viewController id="Tve-mQ-4N9" customClass="ThumbnailCollectionViewController" customModule="Wendersketch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tve-mQ-4N9" customClass="ThumbnailCollectionViewController" customModule="PencilKilDrawingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQ8-Lq-ZvX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="qw8-O0-bcS" customClass="SketchCell" customModule="Wendersketch" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="qw8-O0-bcS" customClass="SketchCell" customModule="PencilKilDrawingApp" customModuleProvider="target">
                                         <rect key="frame" x="57" y="0.0" width="300" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="crg-AB-MZq">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1XZ-62-ySM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2313.04347826087" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-1555" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ca2-Vo-Px4">
@@ -91,12 +91,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6e-NB-D6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402.8985507246377" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-2465" y="76"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="11c-X5-NxB">
             <objects>
-                <viewController storyboardIdentifier="DrawingViewController" id="eay-NW-7jh" customClass="DrawingViewController" customModule="Wendersketch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawingViewController" id="eay-NW-7jh" customClass="DrawingViewController" customModule="PencilKilDrawingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="641-hq-eTh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,13 +108,22 @@
                             <barButtonItem title="Undo" id="6D5-BA-Ahw"/>
                             <barButtonItem title="Redo" id="m7e-Iv-q74"/>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Pencil" id="F1t-PX-fye"/>
+                        <barButtonItem key="rightBarButtonItem" title="Pencil" id="F1t-PX-fye">
+                            <connections>
+                                <action selector="togglePencil:" destination="eay-NW-7jh" id="xFf-ic-VTC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="allowFingerButton" destination="F1t-PX-fye" id="A7s-It-9Hd"/>
+                        <outlet property="redoButton" destination="m7e-Iv-q74" id="06Z-Dy-2bR"/>
+                        <outlet property="undoButton" destination="6D5-BA-Ahw" id="1kS-H4-fpx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZO-Qw-chi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="90"/>
+            <point key="canvasLocation" x="-743" y="78"/>
         </scene>
     </scenes>
     <resources>

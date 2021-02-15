@@ -64,14 +64,14 @@
 		8B3F634425DA487600AD09F7 /* PencilKilDrawingApp */ = {
 			isa = PBXGroup;
 			children = (
-				8B3F636A25DA728D00AD09F7 /* DrawingViewController.swift */,
-				8B3F636825DA728D00AD09F7 /* Sketch.swift */,
-				8B3F636925DA728D00AD09F7 /* SketchCell.swift */,
-				8B3F636B25DA728D00AD09F7 /* ThumbnailCollectionViewController.swift */,
 				8B3F634525DA487600AD09F7 /* AppDelegate.swift */,
 				8B3F634725DA487600AD09F7 /* SceneDelegate.swift */,
 				8B3F634925DA487600AD09F7 /* ViewController.swift */,
 				8B3F634B25DA487600AD09F7 /* Main.storyboard */,
+				8B3F636825DA728D00AD09F7 /* Sketch.swift */,
+				8B3F636925DA728D00AD09F7 /* SketchCell.swift */,
+				8B3F636B25DA728D00AD09F7 /* ThumbnailCollectionViewController.swift */,
+				8B3F636A25DA728D00AD09F7 /* DrawingViewController.swift */,
 				8B3F634E25DA487700AD09F7 /* Assets.xcassets */,
 				8B3F635025DA487700AD09F7 /* LaunchScreen.storyboard */,
 				8B3F635325DA487700AD09F7 /* Info.plist */,
