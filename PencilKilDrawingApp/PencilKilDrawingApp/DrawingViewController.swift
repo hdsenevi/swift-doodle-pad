@@ -28,6 +28,10 @@ class DrawingViewController: UIViewController {
         canvasView.allowsFingerDrawing = false
         view.addSubview(canvasView)
         
+        if let sketch = sketch {
+            canvasView.drawing = sketch.drawing
+        }
+        
         canvasView.translatesAutoresizingMaskIntoConstraints = false
         canvasView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         canvasView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -38,6 +42,17 @@ class DrawingViewController: UIViewController {
         
 //        setupSimpleTools()
         setupToolPicker()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        updateSketch()
+    }
+    
+    func updateSketch() {
+        guard let sketch = sketch else { return }
+        sketch.drawing = canvasView.drawing
+        sketchDataSource?.generateThumbnail(for: sketch)
     }
     
     @IBAction func togglePencil(_ sender: UIBarButtonItem) {

@@ -25,6 +25,7 @@ class ThumbnailCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sketchDataSource.observers.append(self)
         navigationItem.rightBarButtonItem =
             UIBarButtonItem(
                 barButtonSystemItem: .add,
@@ -34,7 +35,6 @@ class ThumbnailCollectionViewController: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width * 4 / 3)
         thumbnailSize = layout.itemSize
-        
     }
     
     @objc
@@ -52,6 +52,11 @@ extension ThumbnailCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SketchCell
         cell.backgroundColor = UIColor.lightGray
+        
+        cell.thumbnailImageView.translatesAutoresizingMaskIntoConstraints = false
+        if let thumbnailImage = sketchDataSource.sketches[indexPath.row].thumbnailImage {
+            cell.image = thumbnailImage
+        }
         
         return cell
     }
@@ -85,5 +90,11 @@ extension ThumbnailCollectionViewController: UICollectionViewDelegateFlowLayout 
         drawingViewController.sketch = sketchDataSource.sketches[indexPath.row]
         drawingViewController.sketchDataSource = sketchDataSource
         navigationController.pushViewController(drawingViewController, animated: true)
+    }
+}
+
+extension ThumbnailCollectionViewController: SketchDataSourceObserver {
+    func thumbnailDidUpdate(_ thumbnail: UIImage) {
+        collectionView.reloadData()
     }
 }
