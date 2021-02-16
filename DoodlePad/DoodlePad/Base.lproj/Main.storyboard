@@ -12,7 +12,7 @@
         <!--Thumbnail Collection View Controller-->
         <scene sceneID="in3-EF-mul">
             <objects>
-                <viewController id="Tve-mQ-4N9" customClass="ThumbnailCollectionViewController" customModule="PencilKilDrawingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tve-mQ-4N9" customClass="ThumbnailCollectionViewController" customModule="DoodlePad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQ8-Lq-ZvX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="qw8-O0-bcS" customClass="SketchCell" customModule="PencilKilDrawingApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="qw8-O0-bcS" customClass="SketchCell" customModule="DoodlePad" customModuleProvider="target">
                                         <rect key="frame" x="57" y="0.0" width="300" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="crg-AB-MZq">
@@ -96,7 +96,7 @@
         <!--Drawing View Controller-->
         <scene sceneID="11c-X5-NxB">
             <objects>
-                <viewController storyboardIdentifier="DrawingViewController" id="eay-NW-7jh" customClass="DrawingViewController" customModule="PencilKilDrawingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawingViewController" id="eay-NW-7jh" customClass="DrawingViewController" customModule="DoodlePad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="641-hq-eTh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,12 +107,12 @@
                         <leftBarButtonItems>
                             <barButtonItem title="Undo" id="6D5-BA-Ahw">
                                 <connections>
-                                    <action selector="undo:" destination="eay-NW-7jh" id="SNE-Pj-8c5"/>
+                                    <action selector="undo:" destination="eay-NW-7jh" id="FnD-XH-NIb"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Redo" id="m7e-Iv-q74">
                                 <connections>
-                                    <action selector="redo:" destination="eay-NW-7jh" id="PWV-ld-MtH"/>
+                                    <action selector="redo:" destination="eay-NW-7jh" id="oaQ-IK-Iy3"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
@@ -125,8 +125,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="allowFingerButton" destination="F1t-PX-fye" id="A7s-It-9Hd"/>
-                        <outlet property="redoButton" destination="m7e-Iv-q74" id="06Z-Dy-2bR"/>
-                        <outlet property="undoButton" destination="6D5-BA-Ahw" id="1kS-H4-fpx"/>
+                        <outlet property="redoButton" destination="m7e-Iv-q74" id="Cdx-JY-0ok"/>
+                        <outlet property="undoButton" destination="6D5-BA-Ahw" id="Dsy-gs-cTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZO-Qw-chi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

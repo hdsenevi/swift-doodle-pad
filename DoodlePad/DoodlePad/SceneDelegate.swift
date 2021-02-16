@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  PencilKilDrawingApp
+//  DoodlePad
 //
 //  Created by Shanaka Senevirathne on 15/2/21.
 //

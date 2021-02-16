@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B3F634225DA487600AD09F7 /* PencilKilDrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PencilKilDrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3F634225DA487600AD09F7 /* DoodlePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoodlePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3F634525DA487600AD09F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B3F634725DA487600AD09F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B3F634925DA487600AD09F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8B3F633925DA487600AD09F7 = {
 			isa = PBXGroup;
 			children = (
-				8B3F634425DA487600AD09F7 /* PencilKilDrawingApp */,
+				8B3F634425DA487600AD09F7 /* DoodlePad */,
 				8B3F634325DA487600AD09F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +56,12 @@
 		8B3F634325DA487600AD09F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B3F634225DA487600AD09F7 /* PencilKilDrawingApp.app */,
+				8B3F634225DA487600AD09F7 /* DoodlePad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B3F634425DA487600AD09F7 /* PencilKilDrawingApp */ = {
+		8B3F634425DA487600AD09F7 /* DoodlePad */ = {
 			isa = PBXGroup;
 			children = (
 				8B3F634525DA487600AD09F7 /* AppDelegate.swift */,
@@ -76,15 +76,15 @@
 				8B3F635025DA487700AD09F7 /* LaunchScreen.storyboard */,
 				8B3F635325DA487700AD09F7 /* Info.plist */,
 			);
-			path = PencilKilDrawingApp;
+			path = DoodlePad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B3F634125DA487600AD09F7 /* PencilKilDrawingApp */ = {
+		8B3F634125DA487600AD09F7 /* DoodlePad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B3F635625DA487700AD09F7 /* Build configuration list for PBXNativeTarget "PencilKilDrawingApp" */;
+			buildConfigurationList = 8B3F635625DA487700AD09F7 /* Build configuration list for PBXNativeTarget "DoodlePad" */;
 			buildPhases = (
 				8B3F633E25DA487600AD09F7 /* Sources */,
 				8B3F633F25DA487600AD09F7 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = PencilKilDrawingApp;
-			productName = PencilKilDrawingApp;
-			productReference = 8B3F634225DA487600AD09F7 /* PencilKilDrawingApp.app */;
+			name = DoodlePad;
+			productName = DoodlePad;
+			productReference = 8B3F634225DA487600AD09F7 /* DoodlePad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B3F633D25DA487600AD09F7 /* Build configuration list for PBXProject "PencilKilDrawingApp" */;
+			buildConfigurationList = 8B3F633D25DA487600AD09F7 /* Build configuration list for PBXProject "DoodlePad" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B3F634125DA487600AD09F7 /* PencilKilDrawingApp */,
+				8B3F634125DA487600AD09F7 /* DoodlePad */,
 			);
 		};
 /* End PBXProject section */
@@ -304,12 +304,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MSSM7WCB9;
-				INFOPLIST_FILE = PencilKilDrawingApp/Info.plist;
+				INFOPLIST_FILE = DoodlePad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.shanaka.PencilKilDrawingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = info.shanaka.DoodlePad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,12 +323,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MSSM7WCB9;
-				INFOPLIST_FILE = PencilKilDrawingApp/Info.plist;
+				INFOPLIST_FILE = DoodlePad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.shanaka.PencilKilDrawingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = info.shanaka.DoodlePad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B3F633D25DA487600AD09F7 /* Build configuration list for PBXProject "PencilKilDrawingApp" */ = {
+		8B3F633D25DA487600AD09F7 /* Build configuration list for PBXProject "DoodlePad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B3F635425DA487700AD09F7 /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B3F635625DA487700AD09F7 /* Build configuration list for PBXNativeTarget "PencilKilDrawingApp" */ = {
+		8B3F635625DA487700AD09F7 /* Build configuration list for PBXNativeTarget "DoodlePad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B3F635725DA487700AD09F7 /* Debug */,
