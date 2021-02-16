@@ -1,6 +1,4 @@
-# RayWenderlich - Create a Drawing App With PencilKit
-
-[See how to get started with the recently announced PencilKit in iOS 13 bringing great pencil experiences to your apps.](https://www.raywenderlich.com/6275408-create-a-drawing-app-with-pencilkit)
+# Doodle Pad for Kids
 
 
 
@@ -19,7 +17,8 @@
 
 ### Useful links
 
-* https://www.raywenderlich.com/6275408-create-a-drawing-app-with-pencilkit
+* Create a drawing app with pencilkit : https://www.raywenderlich.com/6275408-create-a-drawing-app-with-pencilkit
+* Drawing with PencilKit: Getting Started : https://www.raywenderlich.com/12198216-drawing-with-pencilkit-getting-started
 
 ### Version
 
