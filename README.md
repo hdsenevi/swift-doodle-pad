@@ -1,5 +1,9 @@
 # Doodle Pad for Kids
 
+A doodling iOS / iPadOS app for kids written in Swift and UIKit
+
+:warning::warning::warning:
+## :construction: this project is a work in progress
 
 
 ## Screenshots
